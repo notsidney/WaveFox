@@ -404,7 +404,7 @@ and
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #urlbar:not([focused], [open]) > #urlbar-background,
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #searchbar:focus-within
     {
-        box-shadow: var(--outer-box-shadow, none) !important;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0px 7px 8px rgba(0, 0, 0, 0.04);
     }
 
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #nav-bar::before
@@ -609,10 +609,14 @@ spacer[part="overflow-end-indicator"]
 {
     position: relative !important;
     background-image: none !important;
-    box-shadow: none !important;
     opacity: 1 !important;
     border: none !important;
     outline: none !important;
+}
+
+.tab-background:is([selected], [multiselected])
+{
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0px 7px 8px rgba(0, 0, 0, 0.04) !important;
 }
 
 .tabbrowser-tab:hover:not([visuallyselected],[multiselected]) .tab-background
