@@ -4,6 +4,10 @@
 @import "special/mac.css";
 
 
+body, * {
+	font-family: "Segoe UI Variable", "Segoe UI";
+}
+
 @media (-moz-platform: windows),
        (-moz-platform: linux),
        (-moz-platform: macos)
