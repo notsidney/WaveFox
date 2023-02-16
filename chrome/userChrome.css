@@ -837,6 +837,11 @@ spacer[part="overflow-end-indicator"]
     line-height: 20px !important;
 }
 
+.tab-label[selected="true"]
+{
+    font-weight: 600;
+}
+
 .tab-secondary-label
 {
     -moz-box-ordinal-group: 0 !important;
