@@ -46,12 +46,12 @@
                 background-color: transparent !important;
             }
 
-            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
+            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([privatebrowsingmode="temporary"]) #navigator-toolbox
             {
                 background-color: transparent !important;
             }
 
-            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) .titlebar-buttonbox:not(:hover, :hover:active)
+            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([privatebrowsingmode="temporary"]):not([sizemode="fullscreen"]) .titlebar-buttonbox:not(:hover, :hover:active)
             {
                 opacity: 0 !important;
             }

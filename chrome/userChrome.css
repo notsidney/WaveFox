@@ -333,24 +333,24 @@ and
 @supports -moz-bool-pref("userChrome.Toolbar.Transparency.VeryHigh.Enabled") and
           -moz-bool-pref("userChrome.ProtonTabs-Enabled")
 {
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode], :not([privatebrowsingmode="temporary"]))
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([privatebrowsingmode="temporary"])
     {
         --toolbar-bgcolor: transparent !important;
         --toolbar-field-background-color: Field !important;
     }
        
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode], :not([privatebrowsingmode="temporary"])) .tabbrowser-tab[visuallyselected] .tab-background
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([privatebrowsingmode="temporary"]) .tabbrowser-tab[visuallyselected] .tab-background
     {
         background-color: Field !important;
     }
 
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode], :not([privatebrowsingmode="temporary"])) #urlbar:not([focused], [open]) > #urlbar-background,
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode], :not([privatebrowsingmode="temporary"])) #searchbar:focus-within
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([privatebrowsingmode="temporary"]) #urlbar:not([focused], [open]) > #urlbar-background,
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([privatebrowsingmode="temporary"]) #searchbar:focus-within
     {
         box-shadow: var(--outer-box-shadow, none) !important;
     }
 
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode], :not([privatebrowsingmode="temporary"])) #nav-bar::before
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([privatebrowsingmode="temporary"]) #nav-bar::before
     {
         display: none !important;
     }
@@ -2831,24 +2831,24 @@ and
 @supports -moz-bool-pref("userChrome.Toolbar.Transparency.VeryHigh.Enabled") and
           -moz-bool-pref("userChrome.ProtonTabs-Enabled")
 {
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode], :not([privatebrowsingmode="temporary"]))
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([privatebrowsingmode="temporary"])
     {
         --toolbar-bgcolor: transparent !important;
         --toolbar-field-background-color: Field !important;
     }
        
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode], :not([privatebrowsingmode="temporary"])) .tabbrowser-tab[visuallyselected] .tab-background
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([privatebrowsingmode="temporary"]) .tabbrowser-tab[visuallyselected] .tab-background
     {
         background-color: Field !important;
     }
 
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode], :not([privatebrowsingmode="temporary"])) #urlbar:not([focused], [open]) > #urlbar-background,
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode], :not([privatebrowsingmode="temporary"])) #searchbar:focus-within
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([privatebrowsingmode="temporary"]) #urlbar:not([focused], [open]) > #urlbar-background,
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([privatebrowsingmode="temporary"]) #searchbar:focus-within
     {
-        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0px 7px 8px rgba(0, 0, 0, 0.04);
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0px 7px 8px rgba(0, 0, 0, 0.04) !important;
     }
 
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode], :not([privatebrowsingmode="temporary"])) #nav-bar::before
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([privatebrowsingmode="temporary"]) #nav-bar::before
     {
         display: none !important;
     }
@@ -5007,6 +5007,3 @@ spacer[part="overflow-end-indicator"]
   }
 
 }
-
-}
->>>>>>> mods
