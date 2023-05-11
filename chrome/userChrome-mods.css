@@ -1,0 +1,109 @@
+body,
+* {
+	font-family: "Segoe UI Variable", "Segoe UI";
+}
+
+@supports -moz-bool-pref("userChrome.Toolbar.Transparency.VeryHigh.Enabled") and -moz-bool-pref(
+		"userChrome.ProtonTabs-Enabled"
+	) {
+	:root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(
+			[privatebrowsingmode="temporary"]
+		) {
+		--toolbar-bgcolor: transparent !important;
+		--toolbar-field-background-color: Field !important;
+	}
+
+	:root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(
+			[privatebrowsingmode="temporary"]
+		)
+		.tabbrowser-tab[visuallyselected]
+		.tab-background {
+		background-color: Field !important;
+	}
+
+	:root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(
+			[privatebrowsingmode="temporary"]
+		)
+		#urlbar:not([focused], [open])
+		> #urlbar-background,
+	:root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(
+			[privatebrowsingmode="temporary"]
+		)
+		#searchbar:focus-within {
+		box-shadow: var(--outer-box-shadow, none) !important;
+	}
+
+	:root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(
+			[privatebrowsingmode="temporary"]
+		)
+		#nav-bar::before {
+		display: none !important;
+	}
+}
+
+@supports -moz-bool-pref("userChrome.Toolbar.Transparency.VeryHigh.Enabled") and -moz-bool-pref(
+		"userChrome.ProtonTabs-Enabled"
+	) {
+	:root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(
+			[privatebrowsingmode="temporary"]
+		) {
+		--toolbar-bgcolor: transparent !important;
+		--toolbar-field-background-color: Field !important;
+	}
+
+	:root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(
+			[privatebrowsingmode="temporary"]
+		)
+		.tabbrowser-tab[visuallyselected]
+		.tab-background {
+		background-color: Field !important;
+	}
+
+	:root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(
+			[privatebrowsingmode="temporary"]
+		)
+		#urlbar:not([focused], [open])
+		> #urlbar-background,
+	:root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(
+			[privatebrowsingmode="temporary"]
+		)
+		#searchbar:focus-within {
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0px 7px 8px rgba(0, 0, 0, 0.04) !important;
+	}
+
+	:root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(
+			[privatebrowsingmode="temporary"]
+		)
+		#nav-bar::before {
+		display: none !important;
+	}
+}
+
+:root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(
+		[privatebrowsingmode="temporary"]
+	)
+	#urlbar:not([focused], [open])
+	> #urlbar-background,
+:root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(
+		[privatebrowsingmode="temporary"]
+	)
+	#searchbar:focus-within {
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0px 7px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+.tab-background {
+	position: relative !important;
+	background-image: none !important;
+	box-shadow: none !important;
+	opacity: 1 !important;
+	border: none !important;
+	outline: none !important;
+}
+
+.tab-background:is([selected], [multiselected]) {
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0px 7px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+.tab-label[selected="true"] {
+	font-weight: 600;
+}
