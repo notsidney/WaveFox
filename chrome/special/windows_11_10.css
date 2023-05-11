@@ -1,5 +1,10 @@
 @media (-moz-platform: windows-win10)
 {
+    :root
+    {
+        font-family: "Segoe UI Variable", "Segoe UI";
+    }
+
     @media (-moz-windows-default-theme: 1)
     {
         @media (-moz-windows-accent-color-in-titlebar: 1)
