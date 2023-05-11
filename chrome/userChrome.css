@@ -27,6 +27,7 @@
         --left-svg:   url("special/tabs/option_2/left_corners.svg");
         --center-svg: url("special/tabs/option_2/center.svg");
         --right-svg:  url("special/tabs/option_2/right_corners.svg");
+        --outer-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0px 7px 8px rgba(0, 0, 0, 0.04);
     }
 }
 
@@ -706,10 +707,7 @@ spacer[part="overflow-end-indicator"]
     --tab-attention-icon-color: currentColor !important;
     --tab-label-mask-size: 10px !important;
     color: inherit !important;
-    overflow-x: clip !important;
-    overflow-y: visible !important;
-    overflow-clip-margin: var(--tab-overflow-clip-margin) !important;
-    clip-path: inset(var(--tab-inset-clip-path)) !important;
+    overflow: visible !important;
     padding-inline: var(--tab-inline-padding, 0px) !important;
 }
 
@@ -748,19 +746,19 @@ spacer[part="overflow-end-indicator"]
     --svg-mask-position: left center, center center, right center;
     --svg-mask-repeat: no-repeat, no-repeat, no-repeat;
 
-    mask-image: var(--svg-mask-image);
+    /* mask-image: var(--svg-mask-image);
     mask-origin: var(--svg-mask-origin);
     mask-size: var(--svg-mask-size);
     mask-position: var(--svg-mask-position);
-    mask-repeat: var(--svg-mask-repeat);
+    mask-repeat: var(--svg-mask-repeat); */
     
     box-shadow: none !important;
     opacity: 1 !important;
     border: none !important;
     outline: none !important;
     margin-block: var(--tab-bg-block-margin, 0px) !important;
-    margin-inline: calc(-1 * (var(--tab-min-height) / 2)) !important;
-    border-radius: 0px !important;
+    /* margin-inline: calc(-1 * (var(--tab-min-height) / 2)) !important; */
+    /* border-radius: 0px !important; */
     pointer-events: none !important;
 }
 
@@ -771,7 +769,8 @@ spacer[part="overflow-end-indicator"]
     background-size: var(--gradient-background-size), var(--amo-background-size-1), var(--amo-background-size-2) !important;
     background-position: var(--gradient-background-position), var(--amo-background-position-1), var(--amo-background-position-2) !important;
     background-repeat: var(--gradient-background-repeat), var(--amo-background-repeat-1), var(--amo-background-repeat-2) !important;
-    background-color: transparent !important;
+    /* background-color: transparent !important; */
+    box-shadow: var(--outer-box-shadow) !important;
 }
 
 .tabbrowser-tab:not([visuallyselected]) .tab-background
@@ -963,6 +962,11 @@ spacer[part="overflow-end-indicator"]
     overflow: hidden;
     text-overflow: ellipsis;
     margin-block: 0px !important;
+}
+
+.tab-label
+{
+    font-weight: 600;
 }
 
 .tab-secondary-label
